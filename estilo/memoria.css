@@ -53,6 +53,8 @@ article h4 {
 /*Specificity(002)*/
 article img {
     margin: 0em;
+    width: 80%;
+    height: 80%;
     position: absolute;
     border-radius: 0.1em;
     background: #1C7CCC;
