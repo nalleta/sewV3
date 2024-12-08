@@ -42,7 +42,7 @@
         <h2>Juego de Memoria</h2>
         <section>
             <h3>Cómo jugar</h3>
-            <p>Las tarjetas contienen escuderías de equipos de Fórmula uno, debes emparejarlos con sus iguales.</p> 
+            <p>Las tarjetas contienen los logos de las escuderías asociadas a los equipos de Fórmula uno, debes emparejarlos con sus iguales.</p> 
             <p>Para ello debes seguir los siguientes pasos:</p>
             <ol>
                 <li>Interactuar con una carta.</li>
@@ -51,8 +51,13 @@
             </ol>
         </section>
         <section>
+            <h3>Reiniciar tu juego</h3>
+            <p>Si deseas reiniciar tu juego, pulsa el botón de reinicio.</p>
+            <button onclick="m.startGame()">Reiniciar</button>
+        </section>
+        <section>
             <h3>Juego</h3>
-            <script>new Memoria()</script>
+            <script>var m = new Memoria();</script> 
         </section>
 </body>
 </html>
