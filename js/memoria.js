@@ -1,6 +1,18 @@
 "use strict";
 class Memoria {
     constructor() {
+        this.startGame();
+    }
+
+    startGame(){
+        this.removeAll();
+        this.initElements();
+        this.shuffleElements();
+        this.createElements();
+        this.addEventListeners();
+    }
+
+    initElements(){
         this.hasFlippedCard = false;
         this.lockBoard = false;
         this.firstCard = null;
@@ -44,10 +56,6 @@ class Memoria {
                 enlace:"https://upload.wikimedia.org/wikipedia/commons/f/fb/Mercedes_AMG_Petronas_F1_Logo.svg"
             },
         ]
-
-        this.shuffleElements();
-        this.createElements();
-        this.addEventListeners();
     }
 
     shuffleElements(){
@@ -128,5 +136,12 @@ class Memoria {
             game.secondCard = this;
             game.checkForMatch();
         }
+    }
+
+    removeAll(){
+        var articles = document.querySelectorAll("section:last-of-type article");
+        articles.forEach(element => {
+            element.remove();
+        });
     }
 }
